@@ -1,0 +1,49 @@
+Traceback (most recent call last):
+  File "/home/adeel/anaconda3/lib/python3.9/site-packages/speech_recognition/__init__.py", line 241, in __enter__
+    self.audio_reader = wave.open(self.filename_or_fileobject, "rb")
+  File "/home/adeel/anaconda3/lib/python3.9/wave.py", line 509, in open
+    return Wave_read(f)
+  File "/home/adeel/anaconda3/lib/python3.9/wave.py", line 163, in __init__
+    self.initfp(f)
+  File "/home/adeel/anaconda3/lib/python3.9/wave.py", line 130, in initfp
+    raise Error('file does not start with RIFF id')
+wave.Error: file does not start with RIFF id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adeel/anaconda3/lib/python3.9/site-packages/speech_recognition/__init__.py", line 246, in __enter__
+    self.audio_reader = aifc.open(self.filename_or_fileobject, "rb")
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 917, in open
+    return Aifc_read(f)
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 352, in __init__
+    self.initfp(file_object)
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 316, in initfp
+    raise Error('file does not start with FORM id')
+aifc.Error: file does not start with FORM id
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adeel/anaconda3/lib/python3.9/site-packages/speech_recognition/__init__.py", line 272, in __enter__
+    self.audio_reader = aifc.open(aiff_file, "rb")
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 917, in open
+    return Aifc_read(f)
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 358, in __init__
+    self.initfp(f)
+  File "/home/adeel/anaconda3/lib/python3.9/aifc.py", line 314, in initfp
+    chunk = Chunk(file)
+  File "/home/adeel/anaconda3/lib/python3.9/chunk.py", line 63, in __init__
+    raise EOFError
+EOFError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/adeel/Downloads/audio file/X-lens audio and text samples 15-11-2023/audio data/script.py", line 42, in <module>
+    transcribed_text=transcribe_audio(audio_file, recognizer, language="nl-NL")
+  File "/home/adeel/Downloads/audio file/X-lens audio and text samples 15-11-2023/audio data/script.py", line 12, in transcribe_audio
+    with sr.AudioFile(audio_file) as source:
+  File "/home/adeel/anaconda3/lib/python3.9/site-packages/speech_recognition/__init__.py", line 274, in __enter__
+    raise ValueError("Audio file could not be read as PCM WAV, AIFF/AIFF-C, or Native FLAC; check if file is corrupted or in another format")
+ValueError: Audio file could not be read as PCM WAV, AIFF/AIFF-C, or Native FLAC; check if file is corrupted or in another format
